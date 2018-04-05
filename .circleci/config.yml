@@ -39,7 +39,7 @@ jobs:
           name: build project
           command: yarn build
       - persist_to_workspace:
-          root: ~/Express-Template-JMM
+          root: CIRCLE_WORKING_DIRECTORY
           paths:
             - build
 
