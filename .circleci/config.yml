@@ -65,7 +65,7 @@ jobs:
   deploy:
       <<: *defaults
       steps:
-        - run: ssh -i ${BOX_SSH_KEY} ubuntu@18.219.190.156.com "./fetch.sh"
+        - run: ssh -o StrictHostKeyChecking=no ubuntu@18.219.190.156.com "./fetch.sh"
 
 workflows:
   version: 2
