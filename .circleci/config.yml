@@ -39,6 +39,7 @@ jobs:
           name: build project
           command: yarn build
       - persist_to_workspace:
+          root: ~/Express-Template-JMM
           paths:
             - build
 
