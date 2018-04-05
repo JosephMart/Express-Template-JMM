@@ -39,7 +39,8 @@ jobs:
           name: build project
           command: yarn build
       - persist_to_workspace:
-        - build
+          paths:
+            - build
 
   test:
       docker:
