@@ -1,6 +1,10 @@
 [![Express Logo](https://i.cloudup.com/zfY6lL7eFa-3000x3000.png)](http://expressjs.com/)
-[![deps][deps]][deps-url]
+
 # Express + Babel Template by [JosephMart](https://github.com/JosephMart)
+<div align="left">
+
+[![deps][deps]][deps-url]
+</div>
 
 ## Commands
 ```bash
