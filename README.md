@@ -4,6 +4,7 @@
 <div align="left">
 
 [![deps][deps]][deps-url]
+[![CircleCI](https://circleci.com/gh/JosephMart/Express-Template-JMM.svg?style=svg)](https://circleci.com/gh/JosephMart/Express-Template-JMM)
 </div>
 
 ## Commands
