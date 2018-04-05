@@ -1,0 +1,30 @@
+{
+  "name": "express-template-jmm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Joseph Martinsen",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node dist/index.js",
+    "babel-node": "babel-node --presets=/*a*/ --ignore='foo|bar|baz'",
+    "dev": "nodemon --exec babel-node --presets=es2015 -- src/index.js",
+    "clean": "rimraf dist",
+    "build": "npm run clean && mkdir -p dist && babel src -s -D -d dist --presets=es2015"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "dotenv": "^5.0.1",
+    "nodemon": "^1.17.3",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "throw.js": "^3.0.1"
+  }
+}
