@@ -39,7 +39,7 @@ jobs:
           name: build project
           command: yarn build
       - persist_to_workspace:
-          root: CIRCLE_WORKING_DIRECTORY
+          root: ./
           paths:
             - build
 
