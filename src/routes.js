@@ -8,7 +8,7 @@ const routes = Router();
  */
 routes.get('/', (req, res) => {
     res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify({ a: 1 }, null, 3));
+    res.send(JSON.stringify({ a: 2 }, null, 3));
 });
 
 /**
