@@ -27,8 +27,8 @@ jobs:
           - v1-dependencies-
 
       - run: 
-        name: update-node_modules
-        command: yarn install
+          name: update-node_modules
+          command: yarn install
 
       - save_cache:
           paths:
@@ -36,9 +36,9 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - run:
-        name: build project
-        command: yarn build
+          name: build project
+          command: yarn build
 
       - run:
-        name: run tests
-        command:  yarn test
+          name: run tests
+          command:  yarn test
