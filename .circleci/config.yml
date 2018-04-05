@@ -7,10 +7,6 @@ defaults: &defaults
   docker:
     - image: circleci/node:8.11
   working_directory: ~/Express-Template-JMM
-  branches:
-      only:
-        - master
-        - /rc-.*/
 
 version: 2
 jobs:
@@ -69,6 +65,10 @@ workflows:
   version: 2
   build_test_deploy:
     jobs:
+      branches:
+        only:
+          - master
+          - /rc-.*/
       - build
       - test:
           requires:
