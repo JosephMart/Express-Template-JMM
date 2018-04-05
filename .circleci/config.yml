@@ -38,6 +38,8 @@ jobs:
       - run:
           name: build project
           command: yarn build
+      - persist_to_workspace:
+        - build
 
   test:
       docker:
@@ -47,15 +49,17 @@ jobs:
       working_directory: ~/Express-Template-JMM
 
       steps:
-      - checkout
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-      - run:
-          name: run tests
-          command:  yarn test
+        - checkout
+        - attatch_workspace:
+          - at: build
+        - restore_cache:
+            keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+        - run:
+            name: run tests
+            command:  yarn test
 workflows:
   version: 2
   build_and_test:
