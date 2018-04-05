@@ -61,7 +61,7 @@ jobs:
             - v1-dependencies-
         - run:
             name: run tests
-            command:  ls
+            command: ls dist
 workflows:
   version: 2
   build_and_test:
