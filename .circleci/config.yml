@@ -51,7 +51,7 @@ jobs:
       steps:
         - checkout
         - attatch_workspace:
-          - at: build
+            at: build
         - restore_cache:
             keys:
             - v1-dependencies-{{ checksum "package.json" }}
