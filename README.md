@@ -1,4 +1,5 @@
 [![Express Logo](https://i.cloudup.com/zfY6lL7eFa-3000x3000.png)](http://expressjs.com/)
+[![deps][deps]][deps-url]
 # Express + Babel Template by [JosephMart](https://github.com/JosephMart)
 
 ## Commands
@@ -19,3 +20,6 @@ Utilize [throw.js](https://github.com/kbariotis/throw.js) for error codes
 Move `express-template.service` to `/etc/systemd/system`
 
 See logs with journalctl -u express-template
+
+[deps]: https://img.shields.io/david/JosephMart/Express-Template-JMM.svg
+[deps-url]: https://david-dm.org/JosephMart/Express-Template-JMM
