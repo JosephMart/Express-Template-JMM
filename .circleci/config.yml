@@ -65,7 +65,7 @@ jobs:
   deploy:
       <<: *defaults
       steps:
-        - run: ssh -o StrictHostKeyChecking=no ubuntu@return0software.com "./deploy.sh"
+        - run: ssh -o StrictHostKeyChecking=no ubuntu@return0software.com "home/ubuntu/express-api/deploy.sh"
 
 workflows:
   version: 2
