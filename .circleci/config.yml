@@ -5,14 +5,12 @@
 
 defaults: &defaults
   docker:
-    # specify the version you desire here
     - image: circleci/node:8.11
-    
-    # Specify service dependencies here if necessary
-    # CircleCI maintains a library of pre-built images
-    # documented at https://circleci.com/docs/2.0/circleci-images/
-    # - image: circleci/mongo:3.4.4
   working_directory: ~/Express-Template-JMM
+  branches:
+      only:
+        - master
+        - /rc-.*/
 
 version: 2
 jobs:
@@ -69,7 +67,7 @@ jobs:
 
 workflows:
   version: 2
-  build_and_test:
+  build_test_deploy:
     jobs:
       - build
       - test:
