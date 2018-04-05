@@ -41,7 +41,7 @@ jobs:
       - persist_to_workspace:
           root: "."
           paths:
-            - build
+            - dist
 
   test:
       docker:
@@ -53,7 +53,7 @@ jobs:
       steps:
         - checkout
         - attatch_workspace:
-            at: build
+            at: dist
         - restore_cache:
             keys:
             - v1-dependencies-{{ checksum "package.json" }}
