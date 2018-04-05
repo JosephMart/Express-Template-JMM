@@ -65,7 +65,7 @@ jobs:
   deploy:
       <<: *defaults
       steps:
-        - run: ssh -o StrictHostKeyChecking=no ubuntu@18.219.190.156.com "./fetch.sh"
+        - run: ssh -o StrictHostKeyChecking=no ubuntu@return0software.com "./deploy.sh"
 
 workflows:
   version: 2
