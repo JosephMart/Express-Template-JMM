@@ -52,7 +52,7 @@ jobs:
 
       steps:
         - checkout
-        - attatch_workspace:
+        - attach_workspace:
             at: dist
         - restore_cache:
             keys:
